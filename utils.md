@@ -1,0 +1,2 @@
+VSCODE EXTENSIONS
+-Live Server

@@ -64,7 +64,7 @@ const countTrue = (arr) => {
 // print(countTrue([true, false, false, true, false]))
 // print(countTrue([true, false, false, true, false])) //➞ 2
 // print(countTrue([false, false, false, false])) //➞ 0
-// print(countTrue([])) //➞ 0
+print(countTrue([true, true])) //➞ 0
 
 
 // EXERCISE 05 #############################################################################################
