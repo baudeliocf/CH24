@@ -7,7 +7,7 @@ function print(data) {
 const getFibonacci = (value) => {
     let num1 = 0;
     let num2 = 1;
-    
+
     log += `${num1}`
     if (value == 1) return;
 
@@ -25,7 +25,7 @@ function run() {
     let data = document.querySelector('.input_data').value;
     let number = parseFloat(data);
     if (isNaN(number)) { //if isnt a number parseFloat() return NaN
-        log += `'${data}' isnt a valid input \n`; //ok
+        log += `'${data}' isnt a valid input \n`;
     } else {
         if (!Number.isInteger(number)) {
             log += `'${number}' isnt a integer \n`;
