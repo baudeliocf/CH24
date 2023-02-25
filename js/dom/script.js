@@ -82,3 +82,39 @@ foto.alt = "Foto"
 foto.style.width = "150px"
 
 posicion.append(foto);
+
+
+// sync await fetch??
+// Json Doc
+// JS snippets para documentacion
+// swagger documetancion
+// json commnets to documentacion idk
+
+/*
+
+EVENTOS
+
+        - Evento como atributo de una etiqueta en HTML
+        - EventListener
+
+
+
+Sintaxis del EventListener
+
+        nodo.addEventListener("evento a escuchar", lo que se ejecuta cuando se escucha el evento)
+
+*/
+
+//Debo acceder al elemento desde el HTML
+let boton = document.getElementById("button");
+
+
+//Funcion que se ejecuta cuando se escucha el evento
+function message(){
+    console.log("Hi");
+}
+
+//Agregamos el evento al nodo 
+boton.addEventListener("click", message);
+
+console.log('h');
