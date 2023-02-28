@@ -1,0 +1,21 @@
+.image {
+    margin: auto;
+    display: block;
+    background-color: rebeccapurple;
+}
+
+p {
+    text-align: center;
+}
+
+.border {
+    /* border-color: rgb(0, 0, 0, 0) !important;  */
+    /* border-color: rgb(255, 0, 0) !important;  */
+}
+
+.btn-primary {
+    margin: auto;
+    display: block;
+    background-color: #7cdf20;
+    border-color: #FC7F66;
+}
