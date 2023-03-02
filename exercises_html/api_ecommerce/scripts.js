@@ -6,8 +6,12 @@
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
 
-function showProducts() {
+function eraserPrducts() {
   document.getElementById("container").innerHTML = "";
+}
+
+function showProducts() {
+  eraserPrducts();
   fetch("https://fakestoreapi.com/products")
     .then((api_data) => {
       return api_data.json();
@@ -20,51 +24,9 @@ function showProducts() {
     });
 }
 
-function showElectronics() {
-  document.getElementById("container").innerHTML = "";
-  fetch("https://fakestoreapi.com/products/category/electronics")
-    .then((api_data) => {
-      return api_data.json();
-    })
-    .then((json_data) => {
-      console.log(json_data[0]);
-      for (let i = 0; i < json_data.length; i++) {
-        add_item(json_data[i]);
-      }
-    });
-}
-
-function showJewelery() {
-  document.getElementById("container").innerHTML = "";
-  fetch("https://fakestoreapi.com/products/category/jewelery")
-    .then((api_data) => {
-      return api_data.json();
-    })
-    .then((json_data) => {
-      console.log(json_data[0]);
-      for (let i = 0; i < json_data.length; i++) {
-        add_item(json_data[i]);
-      }
-    });
-}
-
-function showMen() {
-  document.getElementById("container").innerHTML = "";
-  fetch("https://fakestoreapi.com/products/category/men's%20clothing")
-    .then((api_data) => {
-      return api_data.json();
-    })
-    .then((json_data) => {
-      console.log(json_data[0]);
-      for (let i = 0; i < json_data.length; i++) {
-        add_item(json_data[i]);
-      }
-    });
-}
-
-function showWomen() {
-  document.getElementById("container").innerHTML = "";
-  fetch("https://fakestoreapi.com/products/category/women's%20clothing")
+function showCategory(category) {
+  eraserPrducts();
+  fetch(`https://fakestoreapi.com/products/category/${category}`)
     .then((api_data) => {
       return api_data.json();
     })

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Almacenamiento</title>
+</head>
+<body>
+    
+    <!-- Formulario para ingresar datos y guardarlos en localStorage -->
+
+    <div>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre">
+            <label for="password">Password:</label>
+            <input type="text" id="password">
+
+            <br>
+            <br>
+
+            <input type="button" onclick="guardarDatos()" value="Guardar datos" class="guardar">
+            <input type="button" onclick="recuperarDatos()" value="Recuperar datos" class="recuperar">
+        </form>
+
+
+        <p id="datos">Confirmacion</p>
+    </div>
+
+
+
+    <script src="/script.js"></script>
+</body>
+</html>

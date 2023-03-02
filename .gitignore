@@ -28,3 +28,6 @@
 # /test/*/*/*/*.out
 
 /testing
+/exercises_jest/node_modules
+/sessions/jest/node_modules
+/sessions/npm/node_modules

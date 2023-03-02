@@ -194,7 +194,7 @@
 //Primer paso usar fetch a la ruta especificada
 // fetch('https://pokeapi.co/api/v2/pokemon/ditto')
 
-//segundo paso: usar una promesa para resolver la conexion
+// // segundo paso: usar una promesa para resolver la conexion
 // .then(respuesta => {
 //     return respuesta.json();
 // })
@@ -208,56 +208,56 @@
 
 // console.log(informacion.name); //undefined porque la informacion vive dentro de la promesa
 
-let count = 0;
 //################################################################################################
-fetch(`https://pokeapi.co/api/v2/pokemon/`)
-  .then((data) => {
-    return data.json();
-  })
+// let count = 0;
+// fetch(`https://pokeapi.co/api/v2/pokemon/`)
+//   .then((data) => {
+//     return data.json();
+//   })
 
-  .then((data) => {
-    count = data.count;
-    console.log(count);
-    showPokemons(count);
-    //   console.log(data.results.length);
-  });
+//   .then((data) => {
+//     count = data.count;
+//     console.log(count);
+//     showPokemons(count);
+//     //   console.log(data.results.length);
+//   });
 
 //################################################################################################
-function showPokemons(count) {
-  console.log(count);
-  for (let i = 1; i < count; i++) {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-      .then((data) => {
-        return data.json();
-      })
+// function showPokemons(count) {
+//   console.log(count);
+//   for (let i = 1; i < count; i++) {
+//     fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
+//       .then((data) => {
+//         return data.json();
+//       })
 
-      .then((data) => {
-        // console.log(data.results[0].url);
+//       .then((data) => {
+//         // console.log(data.results[0].url);
 
-        image = `<img src=${data.sprites.front_shiny} alt="">`;
+//         image = `<img src=${data.sprites.front_shiny} alt="">`;
 
-        let div = document.getElementById("div_container");
-        div.innerHTML += image;
-      });
-  }
-}
+//         let div = document.getElementById("div_container");
+//         div.innerHTML += image;
+//       });
+//   }
+// }
 //################################################################################################
-fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
-  // fetch ('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd')
+// fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
+//   // fetch ('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd')
 
-  .then((data) => {
-    return data.json();
-  })
+//   .then((data) => {
+//     return data.json();
+//   })
 
-  .then((data) => {
-    // console.log(data);
-    console.log(data.market_data.current_price.usd);
+//   .then((data) => {
+//     // console.log(data);
+//     console.log(data.market_data.current_price.usd);
 
-    tag_p = `<p>${data.market_data.current_price.usd}</p>`;
+//     tag_p = `<p>${data.market_data.current_price.usd}</p>`;
 
-    let div = document.getElementById("div_container");
-    div.innerHTML += tag_p;
-  });
+//     let div = document.getElementById("div_container");
+//     div.innerHTML += tag_p;
+//   });
 
 //################################################################################################
 // Try - Catch (manejo de excepciones)
@@ -265,3 +265,36 @@ fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
 //Intento dividir un numero entre 0
 //Error
 //Mostrar un mensaje con ese error. Atrapa el error, y lo muestra de otra forma
+
+//################################################################################################
+
+//Metodo POST usando FETCH
+
+//Seguimos utilizando el fetch
+fetch('https://fakestoreapi.com/products',{
+            method:"POST", //especificamos el metodo de envio
+            body:JSON.stringify( //el cuerpo de la solicitud, que es un objeto de JS, se convierte a un JSON como cadena de texto para que el servidor lo pueda leer
+                {
+                    title: 'Termo para Cafe',
+                    price: 55.5,
+                    description: 'Nuevo termo para tu cafecito',
+                    image: 'https://i.pravatar.cc',
+                    category: 'hogar'
+                }
+            )
+        })
+
+        //promesas
+            .then(res=>res.json()) //promesa es para comprobar que el elemento se envio correctamente
+            .then(json=>console.log(json))//promesa es para, que en caso de que el objeto se enviara correctamente, se muestre en la consola.
+
+
+/*
+Cuando trabajamos con un metodo POST, debemos tener en cuenta lo siguiente:
+
+        - Especificar el tipo de metodo
+        - Debemos incluir un cuerpo de la solicitud
+            - Respetar la estructura del objeto
+            - Convertirlo a una cadena 
+
+*/
