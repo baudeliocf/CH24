@@ -1,0 +1,30 @@
+.astronauts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.astronaut-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+.astronauts-title {
+    color: #fa2fb5;
+    font-size: 3rem;
+}
+
+/* <img className='apod-img' alt="APOD" src={data.url}></img> */
+
