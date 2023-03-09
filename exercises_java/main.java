@@ -170,8 +170,17 @@ public class Practica {
 		System.out.println(new StringBuilder(word).reverse().toString());
 	}
 
+	// 15. Escribir un metodo para encontrar el factorial de un numero sin loops
+	static int factorial(int n) {
+		if (n <= 1) {
+			return 1;
+		}
+		return n * factorial(n - 1);
+	}
+
 	public static void main(String[] args) {
 //		invertWord("Hola");
+		System.out.println(factorial(5));
 	}
 
 }
