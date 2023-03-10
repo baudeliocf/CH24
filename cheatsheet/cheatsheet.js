@@ -4,3 +4,9 @@ const print = (data) => {
 
 //ternary operator
 condition ? exprIfTrue : exprIfFalse
+
+
+"*".repeat(3) //***
+array.map(e => {
+    
+})
